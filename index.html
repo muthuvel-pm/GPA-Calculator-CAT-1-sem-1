@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPA Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>GPA Calculator</h1>
+      <p>Enter your marks for each subject to see your GPA.</p>
+    </header>
+
+    <form id="gpa-form" novalidate>
+      <div id="fields" class="fields"></div>
+      <div class="actions">
+        <button type="submit" class="primary">Calculate GPA</button>
+        <button type="reset" class="ghost">Clear</button>
+      </div>
+    </form>
+
+    <section id="result" class="result" hidden aria-live="polite">
+      <span class="result-label">Your GPA</span>
+      <div class="result-value"><span id="gpa-value">0.00</span><small>/ 10</small></div>
+      <div class="meter"><div id="meter-fill"></div></div>
+    </section>
+    <p id="error" class="error" role="alert" hidden></p>
+  </main>
+
+  <script src="calculator.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
